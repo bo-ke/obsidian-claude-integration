@@ -1,0 +1,35 @@
+{
+  "name": "obsidian-claude-integration",
+  "version": "1.0.0",
+  "description": "Bidirectional integration between Obsidian and Claude - call Claude API from Obsidian and expose notes via MCP Server",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "version": "node version-bump.mjs && git add manifest.json versions.json",
+    "mcp": "node dist/mcp-server.js"
+  },
+  "keywords": [
+    "obsidian",
+    "claude",
+    "mcp",
+    "ai",
+    "notes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "0.19.9",
+    "obsidian": "latest",
+    "tslib": "2.6.2",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "ws": "^8.18.0"
+  }
+}

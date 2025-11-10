@@ -1,0 +1,24 @@
+/* Claude Integration Plugin Styles */
+
+.claude-chat-history {
+    background-color: var(--background-primary);
+    border-radius: 4px;
+}
+
+.chat-message {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.chat-message.user {
+    background-color: var(--background-secondary);
+}
+
+.chat-message.assistant {
+    background-color: var(--background-modifier-hover);
+}
+
+.chat-message strong {
+    color: var(--text-accent);
+}
